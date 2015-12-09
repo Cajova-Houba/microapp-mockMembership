@@ -41,6 +41,6 @@
     <context:annotation-config/>
 
     <!-- Activates scanning of @Repository -->
-    <context:component-scan base-package="org.microapp.dao"/>
+    <context:component-scan base-package="org.microapp.dao.hib"/>
 
 </beans>

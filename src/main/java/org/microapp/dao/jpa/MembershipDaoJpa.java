@@ -1,26 +1,25 @@
-package org.microapp.dao.hib;
+package org.microapp.dao.jpa;
 
 import java.util.List;
 
 import org.microapp.dao.base.MembershipDao;
-import org.microapp.dao.hib.base.GenericDaoHibernate;
+import org.microapp.dao.jpa.base.GenericDaoJpa;
 import org.microapp.model.Membership;
 import org.springframework.stereotype.Repository;
-import org.springframework.transaction.annotation.Transactional;
 
-@Repository("membershipDao")
-public class MembershipDaoHibernate extends
-		GenericDaoHibernate<Membership, Long> implements MembershipDao {
+@Repository("membershipDaoJpa")
+public class MembershipDaoJpa extends GenericDaoJpa<Membership, Long> implements
+		MembershipDao {
 
-	public MembershipDaoHibernate() {
+	public MembershipDaoJpa() {
 		super(Membership.class);
 		// TODO Auto-generated constructor stub
 	}
 
-	@Override
 	public List<Membership> getAllForPerson(long personId) {
 		// TODO Auto-generated method stub
 		return null;
 	}
+
 
 }

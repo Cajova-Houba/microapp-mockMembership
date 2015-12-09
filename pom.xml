@@ -4,8 +4,8 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.microapp</groupId>
     <artifactId>microapp-mockMembership</artifactId>
-    <packaging>jar</packaging>
     <version>1.0-SNAPSHOT</version>
+    <packaging>jar</packaging>
     <name>MockMembership microapp</name>
 
     <!-- <parent>
@@ -126,6 +126,11 @@
     </build>
     <dependencies>
     	
+		<dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-entitymanager</artifactId>
+            <version>${hibernate.version}</version>
+        </dependency>
 		
 		<dependency>
             <groupId>org.hibernate.javax.persistence</groupId>

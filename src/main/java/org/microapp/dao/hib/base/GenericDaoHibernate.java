@@ -220,7 +220,6 @@ public class GenericDaoHibernate<T, PK extends Serializable> implements GenericD
         HibernateSearchTools.reindexAll(async, getSessionFactory().getCurrentSession());
     }
 
-	@Override
 	public List<T> getAllForPerson(long personId) {
 		// TODO Auto-generated method stub
 		return null;
