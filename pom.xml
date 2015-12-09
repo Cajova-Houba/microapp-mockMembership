@@ -3,10 +3,10 @@
 
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.microapp</groupId>
-    <artifactId>microapp-generic</artifactId>
+    <artifactId>microapp-mockMembership</artifactId>
     <packaging>jar</packaging>
     <version>1.0-SNAPSHOT</version>
-    <name>Generic microapplication</name>
+    <name>MockMembership microapp</name>
 
     <!-- <parent>
         <groupId>org.appfuse</groupId>
@@ -229,7 +229,7 @@
         <amp.genericCore>true</amp.genericCore>
         <amp.fullSource>false</amp.fullSource>
         <dao.framework>hibernate</dao.framework>
-        <db.name>microapp_houses</db.name>
+        <db.name>membership_mock</db.name>
         <web.framework>spring</web.framework>
 
         <!-- Framework/Plugin versions -->

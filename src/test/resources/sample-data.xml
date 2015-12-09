@@ -118,7 +118,7 @@
             <value description="user_id">-3</value>
             <value description="role_id">-2</value>
         </row>
-    </table> -->
+    </table> 
 	<table name="house">
 		<column>id</column>
 		<column>address</column>
@@ -143,5 +143,139 @@
 				<value description="address">Merkuriuksenkatu 5D Riihimäki</value>
 				<value description="person_id">4</value>
 		</row>
-	</table>
+	</table> -->
+	<table name="member">
+	<column>id</column>
+	<column>name</column>
+	<row>
+			<value description="id">1</value>
+			<value description="name">Zdenek Vales</value>
+	</row>
+	<row>
+			<value description="id">2</value>
+			<value description="name">Matt Raible</value>
+	</row>
+	<row>
+			<value description="id">3</value>
+			<value description="name">Asdf Asdf</value>
+	</row>
+	<row>
+			<value description="id">4</value>
+			<value description="name">Bob Mc Cool</value>
+	</row>
+	<row>
+			<value description="id">5</value>
+			<value description="name">Evil Symphonist</value>
+	</row>
+	<row>
+			<value description="id">6</value>
+			<value description="name">Beany Ben</value>
+	</row>
+	<row>
+			<value description="id">7</value>
+			<value description="name">Mark Itzero</value>
+	</row>
+	<row>
+			<value description="id">8</value>
+			<value description="name">Peter Sack</value>
+	</row>
+</table>
+
+
+
+<table name="society">
+	<column>id</column>
+	<column>name</column>
+	<row>
+			<value description="id">1</value>
+			<value description="name">Kannonkosken Kiho</value>
+	</row>
+	<row>
+			<value description="id">2</value>
+			<value description="name">Leppävaaran martat</value>
+	</row>
+	<row>
+			<value description="id">3</value>
+			<value description="name">Mopokerho Halavatun Papat</value>
+	</row>
+	<row>
+			<value description="id">4</value>
+			<value description="name">Nagu 69'ers</value>
+	</row>
+	<row>
+			<value description="id">5</value>
+			<value description="name">Nagu 99'ers</value>
+	</row>
+	<row>
+			<value description="id">6</value>
+			<value description="name">Kudin ja Puikko jaos</value>
+	</row>
+</table>
+
+<table name="membership">
+	<column>id</column>
+	<column>lower_id</column>
+	<column>upper_id</column>
+	<row>
+			<value description="id">1</value>
+			<value description="lower_id">1</value>
+			<value description="upper_id">1</value>
+	</row>
+	<row>
+			<value description="id">2</value>
+			<value description="lower_id">1</value>
+			<value description="upper_id">2</value>
+	</row>
+	<row>
+			<value description="id">3</value>
+			<value description="lower_id">8</value>
+			<value description="upper_id">5</value>
+	</row>
+	<row>
+			<value description="id">4</value>
+			<value description="lower_id">6</value>
+			<value description="upper_id">4</value>
+	</row>
+	<row>
+			<value description="id">5</value>
+			<value description="lower_id">3</value>
+			<value description="upper_id">3</value>
+	</row>
+	<row>
+			<value description="id">6</value>
+			<value description="lower_id">2</value>
+			<value description="upper_id">2</value>
+	</row>
+	<row>
+			<value description="id">7</value>
+			<value description="lower_id">6</value>
+			<value description="upper_id">6</value>
+	</row>
+	<row>
+			<value description="id">8</value>
+			<value description="lower_id">4</value>
+			<value description="upper_id">4</value>
+	</row>
+	<row>
+			<value description="id">9</value>
+			<value description="lower_id">5</value>
+			<value description="upper_id">2</value>
+	</row>
+	<row>
+			<value description="id">10</value>
+			<value description="lower_id">7</value>
+			<value description="upper_id">4</value>
+	</row>
+	<row>
+			<value description="id">11</value>
+			<value description="lower_id">2</value>
+			<value description="upper_id">6</value>
+	</row>
+	<row>
+			<value description="id">12</value>
+			<value description="lower_id">1</value>
+			<value description="upper_id">3</value>
+	</row>
+</table>
+
 </dataset>

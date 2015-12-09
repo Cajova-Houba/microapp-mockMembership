@@ -7,5 +7,8 @@
 <hibernate-configuration>
     <session-factory>
     	<!-- add mapping here -->
+    	<mapping class="org.microapp.model.Membership"/>
+    	<mapping class="org.microapp.model.Member"/>
+    	<mapping class="org.microapp.model.Society"/>
     </session-factory>
 </hibernate-configuration>
