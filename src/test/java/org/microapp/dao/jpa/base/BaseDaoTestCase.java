@@ -13,6 +13,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.MissingResourceException;
 import java.util.ResourceBundle;
+
 import javax.persistence.EntityManagerFactory;
 import javax.transaction.Transactional;
 
@@ -26,12 +27,18 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
  */
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(
-    locations={"classpath:/applicationContext-resources.xml",
-               "classpath:/applicationContext-jpa.xml",
+    locations={"classpath:/applicationContext-mockMembership-resources.xml",
+               "classpath:/applicationContext-mockMembership-jpa.xml",
                "classpath*:/applicationContext.xml",
                "classpath:**/applicationContext*.xml"})
 @Transactional
 public abstract class BaseDaoTestCase {
+	
+	/**
+	 * Name of {@link EntityManagerFactory} bean
+	 */
+	private final String ENTITY_MANAGER_FACTORY = "entityManagerFactoryMN";
+	
     /**
      * Log variable for all child classes. Uses LogFactory.getLog(getClass()) from Commons Logging
      */
@@ -83,7 +90,7 @@ public abstract class BaseDaoTestCase {
      */
     @Autowired
     public void flushSearchIndexes(ApplicationContext applicationContext) {
-        EntityManagerFactory entityManagerFactory = (EntityManagerFactory) applicationContext.getBean("entityManagerFactory");
+        EntityManagerFactory entityManagerFactory = (EntityManagerFactory) applicationContext.getBean(ENTITY_MANAGER_FACTORY);
         FullTextEntityManager fullTextEntityMgr = Search.getFullTextEntityManager(entityManagerFactory.createEntityManager());
         fullTextEntityMgr.flushToIndexes();
     }

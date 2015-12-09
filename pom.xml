@@ -59,7 +59,7 @@
                 <artifactId>hibernate4-maven-plugin</artifactId>
                 <version>1.0.5</version>
                 <configuration>
-                        <hibernateProperties>${project.build.outputDirectory}/jdbc.properties</hibernateProperties>
+                        <hibernateProperties>${project.build.outputDirectory}/${jdbc.properties.file}</hibernateProperties>
                         <target>BOTH</target>
                         <skip>${skipTests}</skip>
                     </configuration>
@@ -261,6 +261,8 @@
         <hibernate-search.version>4.5.1.Final</hibernate-search.version>
 		<spring.version>4.2.3.RELEASE</spring.version>
 		
+		<!-- file names -->
+		<jdbc.properties.file>jdbcMN.properties</jdbc.properties.file>
 		
     </properties>
 

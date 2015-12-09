@@ -29,7 +29,7 @@ import org.springframework.transaction.annotation.Transactional;
  */
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(
-        locations = {"classpath:/applicationContext-resources.xml",
+        locations = {"classpath:/applicationContext-mockMembership-resources.xml",
                 "classpath:/applicationContext-dao.xml",
                 "classpath*:/applicationContext.xml",
                 "classpath:**/applicationContext*.xml"})

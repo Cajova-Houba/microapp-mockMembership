@@ -6,11 +6,11 @@
 		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
 
     <!-- For mail settings and future properties files -->
-    <bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+    <bean id="propertyConfigurerMN" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
         <property name="ignoreUnresolvablePlaceholders" value="true"/>
         <property name="locations">
             <list>
-                <value>classpath:jdbc.properties</value>
+                <value>classpath:jdbcMN.properties</value>
                 <value>classpath:mail.properties</value>
                 <value>classpath:hibernate.properties</value>
             </list>

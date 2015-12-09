@@ -5,10 +5,12 @@
             http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd"
        default-lazy-init="true">
 
+	<import resource="classpath:applicationContext-mockMembership-resources.xml"/>
+
     <bean class="org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor"/>
 
     <!-- EntityManagerFactory -->
-    <bean id="entityManagerFactory" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
+    <bean id="entityManagerFactoryMN" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
         <property name="persistenceUnitManager" ref="persistenceUnitManager"/>
         <property name="jpaProperties">
             <props>
@@ -27,7 +29,7 @@
     <bean id="persistenceUnitManager" class="org.springframework.orm.jpa.persistenceunit.DefaultPersistenceUnitManager">
         <property name="persistenceXmlLocations">
             <list>
-                <value>classpath:META-INF/persistence.xml</value>
+                <value>classpath:META-INF/persistence-mockM.xml</value>
             </list>
         </property>
         <property name="defaultDataSource" ref="dataSource"/>
@@ -38,7 +40,7 @@
 
     <!-- Transaction manager for a single EntityManagerFactory (alternative to JTA) -->
     <bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
-        <property name="entityManagerFactory" ref="entityManagerFactory" />
+        <property name="entityManagerFactory" ref="entityManagerFactoryMN" />
     </bean>
 
     <!-- Activates scanning of @Autowired -->
